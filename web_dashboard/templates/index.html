@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malware Detector Alerts</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        h1 { color: #cc0000; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 8px; }
+    </style>
+</head>
+<head>
+    <title>Malware Detector Alerts</title>
+    <meta http-equiv="refresh" content="10">
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        h1 { color: #cc0000; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 8px; }
+    </style>
+</head>
+<h2>📊 Threat Reason Frequency</h2>
+<img src="data:image/png;base64,{{ chart }}" alt="Threat Chart" />
+
+<h2>🧪 Threat Severity Breakdown</h2>
+<img src="data:image/png;base64,{{ severity_chart }}" alt="Severity Chart" />
+
+<body>
+    <h1>🚨 Real-Time Alerts</h1>
+    {% if alerts %}
+        <pre>
+{% for line in alerts %}
+{{ line.strip() }}
+{% endfor %}
+        </pre>
+    {% else %}
+        <p>No alerts yet.</p>
+    {% endif %}
+</body>
+<body>
+    <h1>🚨 Real-Time Malware Alerts</h1>
+
+    {% if alerts %}
+        <pre>
+{% for line in alerts %}
+{{ line }}
+{% endfor %}
+        </pre>
+    {% else %}
+        <p>No alerts yet.</p>
+    {% endif %}
+
+    <h2>📊 Threat Reason Frequency</h2>
+    {% if chart %}
+        <img src="data:image/png;base64,{{ chart }}" alt="Threat Chart" />
+    {% else %}
+        <p>No chart data available.</p>
+    {% endif %}
+</body>
+
+</html>

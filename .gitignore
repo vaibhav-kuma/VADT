@@ -1,0 +1,32 @@
+.env
+__pycache__/
+logs/
+# Python
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite3
+*.db
+
+# Node (React)
+node_modules/
+build/
+.env
+
+# Virtual envs
+venv/
+.env/
+.env.*
+
+# VSCode settings
+.vscode/
+
+# Exported reports/logs
+exports/
+logs/
+*.csv
+alerts.json
+
+# System files
+.DS_Store
+Thumbs.db
