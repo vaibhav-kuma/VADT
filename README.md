@@ -144,4 +144,4 @@ Feel free to fork and contribute! Open-sourced under [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-Built by \[Your Name] — Cybersecurity Engineer & Developer
+Built by \VAIBHAV KUMAR — Cybersecurity Engineer & Developer
