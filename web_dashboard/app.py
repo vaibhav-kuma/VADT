@@ -66,14 +66,10 @@ def generate_chart(reasons):
 
 @app.route('/')
 def index():
-    alerts, reasons = parse_logs()
-    chart = generate_chart(reasons)
-    return render_template("index.html", alerts=alerts, chart=chart)
-
-alerts, reasons, severities = parse_logs()
-reason_chart = generate_chart(reasons)
-severity_chart = generate_severity_chart(severities)
-return render_template("index.html", alerts=alerts, chart=reason_chart, severity_chart=severity_chart)
+    alerts, reasons, severities = parse_logs()
+    reason_chart = generate_chart(reasons)
+    severity_chart = generate_severity_chart(severities)
+    return render_template("index.html", alerts=alerts, chart=reason_chart, severity_chart=severity_chart)
 
 
 if __name__ == '__main__':

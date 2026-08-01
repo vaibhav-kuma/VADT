@@ -1,10 +1,5 @@
 {
   "cpu_threshold": 50,
-  "banned_keywords": ["--inject", "--steal", "powershell", "cmd.exe /c whoami"]
-}
-
-{
-  "cpu_threshold": 50,
   "banned_keywords": {
     "critical": ["--inject", "mimikatz", "powershell"],
     "medium": ["--debug", "--test"],

@@ -1,32 +1,40 @@
+```
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Environment files
 .env
-__pycache__/
-logs/
-# Python
-__pycache__/
-*.py[cod]
+.env.local
+*.env.*
+
+# Logs
 *.log
-*.sqlite3
-*.db
 
-# Node (React)
-node_modules/
-build/
-.env
+# Temporary files
+*.tmp
+*.swp
 
-# Virtual envs
-venv/
-.env/
-.env.*
+# Coverage reports
+.coverage
+coverage/
+htmlcov/
 
-# VSCode settings
+# IDE files
 .vscode/
+.idea/
 
-# Exported reports/logs
-exports/
-logs/
-*.csv
-alerts.json
+# Dependencies
+.venv/
+venv/
+node_modules/
 
-# System files
-.DS_Store
-Thumbs.db
+# Build artifacts
+dist/
+build/
+target/
+
+# Cache directories
+.mypy_cache/
+.pytest_cache/
+```

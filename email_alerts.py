@@ -10,17 +10,10 @@ EMAIL_HOST = os.getenv("EMAIL_HOST")
 EMAIL_PORT = int(os.getenv("EMAIL_PORT", 587))
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
-EMAIL_TO   = os.getenv("EMAIL_TO")
-EMAIL_TO  = os.getenv("EMAIL_TO", "").split(",")
+EMAIL_TO   = os.getenv("EMAIL_TO", "").split(",")
 EMAIL_CC  = os.getenv("EMAIL_CC", "").split(",")
 EMAIL_BCC = os.getenv("EMAIL_BCC", "").split(",")
 
-msg["To"] = ", ".join(EMAIL_TO)
-msg["Cc"] = ", ".join(EMAIL_CC)
-
-# Send to TO + CC + BCC
-recipients = EMAIL_TO + EMAIL_CC + EMAIL_BCC
-server.sendmail(EMAIL_USER, recipients, msg.as_string())
 
 def get_template(severity, message):
     color = {
