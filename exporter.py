@@ -1,4 +1,3 @@
-// === 📥 Update backend/exporter.py to warn if .env is missing ===
 import csv, json, smtplib, ssl, os, sys
 from email.message import EmailMessage
 import requests

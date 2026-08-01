@@ -5,26 +5,3 @@
   "Suspicious Download": ["curl", "wget", "Invoke-WebRequest", "powershell -enc"],
   "Hacking Tools": ["hydra", "sqlmap", "msfconsole", "meterpreter", "burpsuite"]
 }
-
-{
-  "Code Injection": {
-    "keywords": ["eval(", "exec(", "cmd.exe"],
-    "ttp": "T1059",
-    "tactic": "Execution"
-  },
-  "Reconnaissance": {
-    "keywords": ["nmap", "traceroute"],
-    "ttp": "T1595",
-    "tactic": "Reconnaissance"
-  },
-  "Suspicious Download": {
-    "keywords": ["wget", "curl", "Invoke-WebRequest"],
-    "ttp": "T1105",
-    "tactic": "Command and Control"
-  },
-  "PowerShell Abuse": {
-    "keywords": ["powershell", "iex"],
-    "ttp": "T1059.001",
-    "tactic": "Execution"
-  }
-}
